@@ -14,6 +14,4 @@ public class SomeFeatureEntitiesController : BaseController
         CreatedSomeFeatureEntityDto result = await Mediator.Send(createSomeFeatureEntityCommand);
         return Created("", result);
     }
-
-       
 }
