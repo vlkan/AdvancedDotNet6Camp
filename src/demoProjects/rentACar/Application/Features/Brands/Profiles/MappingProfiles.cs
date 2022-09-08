@@ -20,5 +20,6 @@ public class MappingProfiles : Profile
         CreateMap<Brand, CreateBrandCommand>().ReverseMap();
         CreateMap<IPaginate<Brand>, BrandListModel>().ReverseMap();
         CreateMap<Brand, BrandListDto>().ReverseMap();
+        CreateMap<Brand, BrandGetByIdDto>().ReverseMap();
     }
 }
