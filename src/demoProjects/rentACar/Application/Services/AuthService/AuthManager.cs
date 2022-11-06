@@ -25,7 +25,7 @@ namespace Application.Services.AuthService
             _refreshTokenRepository = refreshTokenRepository;
         }
 
-        public async Task<RefreshToken> AdRefreshToken(RefreshToken refreshToken)
+        public async Task<RefreshToken> AddRefreshToken(RefreshToken refreshToken)
         {
             RefreshToken addedRefreshToken = await _refreshTokenRepository.AddAsync(refreshToken); 
             return addedRefreshToken;
