@@ -1,4 +1,5 @@
 ﻿using Application.Services.Repositories;
+using Core.Security.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -22,6 +23,10 @@ public static class PersistenceServiceRegistration
                 configuration.GetConnectionString("RentACarCampConnectionString")));
         services.AddScoped<IBrandRepository, BrandRepository>();
         services.AddScoped<IModelRepository, ModelRepository>();
+        services.AddScoped<IUserRepository, UserRepository>();
+        services.AddScoped<IRefreshTokenRepository, RefreshTokenRepository>();
+        services.AddScoped<IUserOperationClaimRepository, UserOperationClaimRepository>();
+        services.AddScoped<IOperationClaimRepository, OperationClaimRepository>();
 
         return services;
     }
